@@ -13,7 +13,7 @@ export default function Users() {
         fetch('https://saeid-4edd5-default-rtdb.firebaseio.com/users.json')
             .then(response => response.json())
             .then(usersList => {
-                setUsers(Object.entries(usersList));
+                usersList ? setUsers(Object.entries(usersList)) : setUsers([]);
             });
     }, [getData]);
 
@@ -65,6 +65,7 @@ export default function Users() {
             }
         }
     ];
+
     const removeHandler = (id) => {
         let oldUsers = [...users];
         let mainUser = oldUsers.find(user => user[1].id === id);
@@ -80,7 +81,14 @@ export default function Users() {
             <DataGrid
                 rows={users.map(([id, user]) => ({ id, ...user }))}
                 columns={columns}
-                pageSizeOptions={[8]}
+                initialState={{
+                    pagination: {
+                        paginationModel: {
+                            pageSize: 7,
+                        },
+                    },
+                }}
+                pageSizeOptions={[7]}
                 disableRowSelectionOnClick
             />
         </div>

@@ -23,7 +23,7 @@ export default function NewUser() {
                         <label htmlFor="transaction" className='form__label'>Transaction</label>
                         <input type="text" id='transaction' className='form__input' placeholder='transaction' />
                     </div>
-                    <button className="form__btn">Submit</button>
+                    <button className="submit__btn">Submit</button>
                 </form>
             </div>
         </div>

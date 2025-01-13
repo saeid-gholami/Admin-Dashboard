@@ -33,3 +33,25 @@
     padding: 0.5rem 0.5rem;
     font-size: 1rem;
 }
+
+.submit__btn {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #3d89ee;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: auto;
+    transition: all 200ms ease;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+}
+
+.submit__btn:hover {
+    background-color: #1e78ee;
+}

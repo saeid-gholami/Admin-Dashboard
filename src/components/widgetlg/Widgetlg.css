@@ -1,0 +1,105 @@
+.widgetlg {
+    flex: 2;
+    padding: 20px;
+    margin-right: 20px;
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.widgetlg__title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.widgetlg__table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.widgetlg__img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    object-fit: cover;
+}
+
+.widgetlg__th {
+    text-align: left;
+}
+
+.widgetlg__user {
+    display: flex;
+    align-items: center;
+}
+
+.widgetlg__date,
+.widgetlg__amount {
+    font-weight: 300;
+}
+
+.widgetlg__button {
+    width: 80px;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+
+.widgetlg__button.Approved {
+    background-color: #e5faf2;
+    color: #3bb077;
+    transition: all 200ms ease;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+}
+
+.widgetlg__button.Approved:hover {
+    color: #e5faf2;
+    background-color: #3bb077;
+}
+
+.widgetlg__button.Declined {
+    background-color: #fff0f1;
+    color: #d04545;
+    transition: all 200ms ease;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+}
+
+.widgetlg__button.Declined:hover {
+    color: #fff0f1;
+    background-color: #d04545;
+}
+
+.widgetlg__button.Pending {
+    background-color: #ebf1fe;
+    color: #2b59b6;
+    transition: all 200ms ease;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+}
+
+.widgetlg__button.Pending:hover {
+    color: #ebf1fe;
+    background-color: #2b59b6;
+
+}

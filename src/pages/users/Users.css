@@ -55,3 +55,7 @@ button {
     color: #e5faf2;
     background-color: #3bb077;
 }
+
+.css-1myc5fd-MuiButtonBase-root-MuiButton-root {
+    width: auto !important;
+}

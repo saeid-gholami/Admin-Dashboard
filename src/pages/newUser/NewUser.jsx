@@ -91,17 +91,27 @@ export default function NewUser() {
             <Dialog
                 open={open}
                 aria-labelledby="alert-dialog-title"
-                aria-describedby="alert-dialog-description">
+                aria-describedby="alert-dialog-description"
+                PaperProps={{
+                    style: {
+                        backgroundColor: '#333',
+                        color: '#fff',
+                    },
+                }}>
                 <DialogTitle id="alert-dialog-title">
                     {"Success Alert"}
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
+                    <DialogContentText id="alert-dialog-description" style={{ color: '#fff' }}>
                         User has been added successfully.
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => setOpen(false)}>Close</Button>
+                    <Button variant="contained"
+                        onClick={() => setOpen(false)}
+                        style={{ color: '#fff' }}>
+                        Close
+                    </Button>
                 </DialogActions>
             </Dialog>
         </div>

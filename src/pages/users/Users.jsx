@@ -4,10 +4,20 @@ import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import "./Users.css"
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import Slide from '@mui/material/Slide';
+
 
 export default function Users() {
     const [users, setUsers] = useState([]);
     const [getData, setGetData] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [userID, setUserID] = useState(null)
 
     useEffect(() => {
         fetch('https://saeid-4edd5-default-rtdb.firebaseio.com/users.json')
@@ -52,7 +62,10 @@ export default function Users() {
                         <button
                             className='remove_btn'
                             title='Remove'
-                            onClick={() => removeHandler(params.row.id)}>
+                            onClick={() => {
+                                setUserID(params.row.id);
+                                setOpen(true)
+                            }}>
                             <DeleteIcon />
                         </button>
                         <Link to={`/user/${params.row.id}`}>
@@ -91,6 +104,39 @@ export default function Users() {
                 pageSizeOptions={[7]}
                 disableRowSelectionOnClick
             />
+            <Dialog
+                open={open}
+                aria-describedby="alert-dialog-slide-description"
+                aria-labelledby="alert-dialog-title"
+                PaperProps={{
+                    style: {
+                        backgroundColor: '#333',
+                        color: '#fff',
+                    },
+                }}
+            >
+                <DialogTitle>{"Remove Alert !!!"}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-slide-description" style={{ color: '#fff' }}>
+                        Are you sure you want to remove this user?
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        onClick={() => setOpen(false)}
+                        style={{ color: '#fff' }}
+                        variant="contained">
+                        Close
+                    </Button>
+                    <Button
+                        onClick={() => { removeHandler(userID); setOpen(false); }}
+                        style={{ color: '#fff' }}
+                        variant="contained"
+                        color='error'>
+                        Yes, Remove
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </div>
     )
 }

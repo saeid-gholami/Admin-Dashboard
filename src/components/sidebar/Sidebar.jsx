@@ -58,10 +58,12 @@ export default function Sidebar() {
                                 Products
                             </li>
                         </Link>
-                        <li className="sidebar__list-item">
-                            <AttachMoneyIcon className="sidebar__icon" />
-                            Transactions
-                        </li>
+                        <Link to='newProduct'>
+                            <li className="sidebar__list-item">
+                                <AttachMoneyIcon className="sidebar__icon" />
+                                New Product
+                            </li>
+                        </Link>
                         <li className="sidebar__list-item">
                             <BarChartIcon className="sidebar__icon" />
                             Reports

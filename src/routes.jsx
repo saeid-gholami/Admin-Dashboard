@@ -3,6 +3,7 @@ import Users from './pages/users/Users'
 import NewUser from './pages/newUser/NewUser'
 import Products from './pages/products/Products'
 import NewProducts from './pages/newProducts/NewProducts'
+import Product from './pages/product/Product'
 
 let routes = [
     { path: '/', element: <Home /> },
@@ -10,6 +11,7 @@ let routes = [
     { path: '/newUser', element: <NewUser /> },
     { path: '/products', element: <Products /> },
     { path: '/newProduct', element: <NewProducts /> },
+    { path: '/product/:productID', element: <Product /> },
 ]
 
 export default routes

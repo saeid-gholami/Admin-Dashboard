@@ -90,6 +90,7 @@ export default function Users() {
                     },
                 }}
                 pageSizeOptions={[7]}
+                checkboxSelection
                 disableRowSelectionOnClick
             />
             <Dialog

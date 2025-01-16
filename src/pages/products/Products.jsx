@@ -30,7 +30,7 @@ export default function Users() {
         {
             field: 'title',
             headerName: 'Product Name',
-            width: 200,
+            width: 250,
             renderCell: (params) => {
                 return (
                     <Link to={`/product/${params.row.id}`}>

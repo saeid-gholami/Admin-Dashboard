@@ -1,5 +1,5 @@
 import React from 'react';
-import './widgetsm.css';
+import './Widgetsm.css';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { newMembers } from '../../datas';
 
